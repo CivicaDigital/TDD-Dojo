@@ -1,8 +1,25 @@
 # TDD
 
-## Benefits of TDD
+## What is TDD?
+Test driven development (TDD) is a process used in software development where developers write tests before the write code. Firstly they create a set of tests that define the requirements of a feature. Once they have the tests ready (and failing) they then write the minimal amount of code required to get a test to pass. Once the tests are passing, they can refactor the code to improve it and bring it up to acceptable standards.
+
+At first, the concept of writing the minimal amount of code possible (and often hard code values) to make the tests work will be a strange feeling, and goes against all of your instincts as a good developer. However, it structures the code you do create, and prevents the "bloat" of unnecessary code. 
 
 ## The 3 steps to TDD
+
+* Fail:  Write the test first so that the tests fail.
+* Pass: Write the minimal amount of code possible to get the test to pass.
+* Refactor: Re-write the code to meet the standards of code required ensuring that the test still passes.
+
+## Advantages of TDD
+
+* Reduces the chances of bugs: As you create the code from the tests, you are more likely to discover bugs as you code, because a bug that you find will make a previous test fail. You can then quickly catch the bug and fix it.
+
+* More structured code: Writing little bits of code for each test and then refactoring the code afterwards, creates a stronger structure of code. You aren't writing code that you don't need and then forgetting about it until later, at which point you don't know if it's required for something.
+
+* Allows you to confirm the requirements: Writing a set of tests for each requirement allows you to confirm with the product owner that you agree about what you're expected to deliver. 
+
+* Free documentation: Your tests can act as documentation. A new developer coming onto the project will be able to clearly see how the code was developed and what each bit does.
 
 ## Fizzbuzz example
 
