@@ -16,7 +16,7 @@ The Fizzbuzz problem is simple. A user supplies a number, and the code will work
  
  ### Write your first test
 
- Now that we have the requirments we can write the first test. The first one we will write will be to return the original number as that's the easiest to implement.
+ Now that we have the requirements we can write the first test. The first one we will write will be to return the original number as that's the easiest to implement.
 
  Remember, we don't write any implementation code yet, only the test code. It must fail to start off with!!
 
@@ -55,7 +55,7 @@ Now when you try to run the test, it will compile and then run but most importan
 
 ### Write the first piece of code to make the test pass in the easiest way possible
 
-Remember, we want to make the code pass in the easiest way possible, which can be done by returning a hardcoded value.
+Remember, we want to make the code pass in the easiest way possible, which can be done by returning a hard coded value.
 
 ```cs
 public class FizzBuzzService
@@ -83,7 +83,7 @@ public class FizzBuzzService
 }
 ```
 
-Run the test and it should pass. Change the input number and the expexted string and check that the test still passes.
+Run the test and it should pass. Change the input number and the expected string and check that the test still passes.
 
 ### Next tests
 
@@ -123,7 +123,7 @@ public class FizzBuzzService
 
 Run the tests again and they should all pass. There isn't a way to refactor this, so we can skip this step for this test.
 
-The next test we need to create is to test that if the input is divisble by 5, then the service return "Buzz".
+The next test we need to create is to test that if the input is divisible by 5, then the service return "Buzz".
 
  ```cs
 [Test]
@@ -248,7 +248,7 @@ public class FizzBuzzService
 }
 ```
 
-If we run the tests again, they should all still pass. We have just finished writting our first TDD code. 
+If we run the tests again, they should all still pass. We have just finished writing our first TDD code. 
 
 
 ## Code Katas are the best way to practice TDD
@@ -432,7 +432,7 @@ public class LikeItService
 }
 ```
 
-#### Make the rest of the tests passe
+#### Make the rest of the tests pass
 Now work through each remaining test, one at a time, making them pass and then refactoring the code after.
 
 #### Possible bug
@@ -441,8 +441,21 @@ Now work through each remaining test, one at a time, making them pass and then r
 ```
 What if the input list of names is "Alex", "Alex", "Jacob", "Mark", "Max"?
 ```
-It would give an output of "Alex, Alex and 3 others like this". Which doesn't look right. There may be 2 Alexs that like it, but it would read better as "Alex, Jacob and 3 others like this".
+It would give an output of "Alex, Alex and 3 others like this". Which doesn't look right. There may be 2 Alex's that like it, but it would read better as "Alex, Jacob and 3 others like this".
 
 Add in the new test for this bug and use your TDD knowledge to make all the passes test.
 
+
+
+## The self checkout
+
+Using TDD, create a replica system of a shops self service checkout. You don't need to create a UI, just the components and services that are used in such a system.
+
+* Each item has an estimated weight, so when items are scanned and placed in the packing area, make sure the total weight in the packing area is correct. Allow a 5% discrepancy. (Don't forget the lovely 'Unexpected item in packing area' message that we all hate.)
+* Calculate the total of a list of items that the user scanned in
+* Calculate the amount of change that should be returned to the customer and the denomination of each coin / note that should be given to the customer
+* Display a receipt to show the customer what they purchased, how much each item was, the total the items costs and their payment
+* Calculate the total if the user uses a 15% staff discount but only on non alcoholic items
+
+From the list of requirements above, create some tests for each requirement, make the tests fail, then make the tests pass with the easiest route possible and then finally refactor your code to make it better.
 
