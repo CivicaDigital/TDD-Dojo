@@ -296,7 +296,7 @@ Kata.Likes(new string[] {"Alex", "Jacob", "Mark", "Max"}) => "Alex, Jacob and 2 
 public void NoOneLikes()
 {
     string[] input = new string[0];
-    string expected = "no one likes this";
+    string expected = "No one likes this";
 
     LikeItService likeIt = new LikeItService();
 
@@ -394,7 +394,7 @@ public class LikeItService
 {
     public string Print(string[] input)
     {
-        if (input.Count() == 0)
+        if (input.Length == 0)
         {
             return "no one likes this";
         }
@@ -414,7 +414,7 @@ public class LikeItService
 {
     public string Print(string[] input)
     {
-        if (input.Count() == 0)
+        if (input.Length == 0)
         {
             return "no one likes this";
         }
@@ -435,11 +435,11 @@ public class LikeItService
 {
     public string Print(string[] input)
     {
-        if (input.Count() == 0)
+        if (input.Length == 0)
         {
             return "no one likes this";
         }
-        else if (input.Count() == 1)
+        else if (input.Length == 1)
         {
             return $"{input[0]} likes this";
         }
@@ -453,7 +453,7 @@ public class LikeItService
 Now work through each remaining test, one at a time, making them pass and then refactoring the code after.
 
 #### Possible bug
- Once you have all the tests passing and the code is as good as you can make it, see if you can fix this bug.
+Once you have all the tests passing and the code is as good as you can make it, see if you can fix this bug.
  
 ```
 What if the input list of names is "Alex", "Alex", "Jacob", "Mark", "Max"?
@@ -462,7 +462,9 @@ It would give an output of "Alex, Alex and 3 others like this". Which doesn't lo
 
 Add in the new test for this bug and use your TDD knowledge to make all the passes test.
 
+#### Another possible bug
 
+What if all the names are the same? 
 
 ## The self checkout
 
