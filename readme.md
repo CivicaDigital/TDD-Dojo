@@ -86,6 +86,8 @@ public class FizzBuzzService
 
 Run the test and it should pass. But what happens if we change the test to use 2 as the input?
 
+It still passes, which is wrong.
+
 ### Refactor the code
 
 The service should return the input number as a string, so refactor the code to make it work.
@@ -466,15 +468,33 @@ Add in the new test for this bug and use your TDD knowledge to make all the pass
 
 What if all the names are the same? 
 
-## The self checkout
 
-Using TDD, create a replica system of a shops self service checkout. You don't need to create a UI, just the components and services that are used in such a system.
+## Time to have a go
 
-* Each item has an estimated weight, so when items are scanned and placed in the packing area, make sure the total weight in the packing area is correct. Allow a 5% discrepancy. (Don't forget the lovely 'Unexpected item in packing area' message that we all hate.)
-* Calculate the total of a list of items that the user scanned in
-* Calculate the amount of change that should be returned to the customer and the denomination of each coin / note that should be given to the customer
-* Display a receipt to show the customer what they purchased, how much each item was, the total the items costs and their payment
-* Calculate the total if the user uses a 15% staff discount but only on non alcoholic items
+Here are a couple of exercises that you can work on using TDD. From the list of requirements in each exercise, create some tests for each requirement, make the tests fail, then make the tests pass with the easiest route possible and then finally refactor your code to make it better.
 
-From the list of requirements above, create some tests for each requirement, make the tests fail, then make the tests pass with the easiest route possible and then finally refactor your code to make it better.
+### The self service checkout
+
+Create a replica system of a shops self service checkout. You don't need to create a UI, just the components and services that are used in such a system. 
+
+* An item needs to have a display name, product id, weight and product type.
+* Calculate the total of a list of items that the user scanned in.
+* Calculate the amount of change that should be returned to the customer and the denomination of each coin / note that should be given to the customer.
+* Display a receipt to show the customer what they purchased, how much each item was, the total the items costs and their payment.
+* Each item has an estimated weight, so when items are scanned and placed in the packing area, make sure the total weight in the packing area is correct. Allow a 5% discrepancy. (Don't forget the lovely 'Unexpected item in packing area' message that we all hate.).
+* Calculate the total if the user uses a 15% staff discount but only on non alcoholic items.
+* On Fridays, the shop runs a 3 for the price of 2 (cheapest one free) on confectionery.
+
+
+### Banking
+
+Create some services that are used with day to day banking.
+
+* Add money to a bank account.
+* Withdraw money from a bank account.
+* Give the user an overdraft limit and only allow them to withdraw money up until that limit.
+* Send money from one bank account to another.
+* Print off a statement for the month detailing the users starting balance, their incoming and outgoing transactions and their closing balance.
+* Send the user an email when they are close to their overdraft limit.
+* If there are more than 2 transactions in one day that are over £500, reject the current transaction and send the user an email asking them to get in touch to confirm and retry the transaction
 
