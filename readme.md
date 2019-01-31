@@ -27,15 +27,14 @@ It may seem like it'll take longer, but tackling one test at a time, eventually 
 
 * Free documentation: Your tests can act as documentation. A new developer coming onto the project will be able to clearly see how the code was developed and what each bit does.
 
-```
 Writing tests shows off to the user or customer that you are a developer that can deliver. Refactoring the code afterwards shows off to other developers that you are good at what you do.
-```
+
 
 The above is an interesting statement. It's true that writing the tests and then making them pass, is good enough for the customers. They don't care how it was written, they just want the results. But as a developer you should take pride in your work, and that's where the refactoring comes in. Refactoring makes code better which makes you look better. This is achievable with TDD. 
 
-```
+
 Without TDD, you create code that may look good, but if there are lots of bugs, the customer will notice and then you'll look bad to them and naturally you'll look bad to other developers. 
-```
+
 
 The above statement is also true, but take it with a pinch of salt. You can be an excellent developer without TDD, but imagine how much better you could be with TDD! 
 
@@ -297,11 +296,10 @@ https://www.codewars.com/ is a fantastic site for Code Katas.
 ### Who likes it
 This is an example Kata from Codewars.
 
-```
 You probably know the "like" system from Facebook and other pages. People can "like" blog posts, pictures or other items. We want to create the text that should be displayed next to such an item.
 
 Implement a function likes :: [String] -> String, which must take in input array, containing the names of people who like an item. It must return the display text as shown in the examples:
-
+```
 Kata.Likes(new string[0]) => "no one likes this"
 Kata.Likes(new string[] {"Peter"}) => "Peter likes this"
 Kata.Likes(new string[] {"Jacob", "Alex"}) => "Jacob and Alex like this"
@@ -337,6 +335,7 @@ public void OneLike()
     
     Assert.AreEqual(expected, result);
 }
+
 
 [Test]
 public void TwoLikes()
