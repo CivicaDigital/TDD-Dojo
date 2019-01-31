@@ -11,6 +11,12 @@ At first, the concept of writing the minimal amount of code possible (and often 
 * Pass: Write the minimal amount of code possible to get the test to pass.
 * Refactor: Re-write the code to meet the standards of code required ensuring that the test still passes.
 
+## Why do it this way?
+
+If you have a feature to write, and break it down into what the feature should do, and split these into tasks or tests, you have the actual goals of what you want to achieve. If you then attempted to write the code to pass all the tasks or tests at once, you may end up with code you don't need and bugs that sneak in. Writing code to solve a simple task, or test is less prone to bugs than code written to solve multiple tasks or tests at once. 
+
+It may seem like it'll take longer, but tackling one test at a time, eventually will get your flow running quicker, with less bugs and we all know that less bugs means less time banging our heads against the desk!
+
 ## Advantages of TDD
 
 * Reduces the chances of bugs: As you create the code from the tests, you are more likely to discover bugs as you code, because a bug that you find will make a previous test fail. You can then quickly catch the bug and fix it.
@@ -20,6 +26,18 @@ At first, the concept of writing the minimal amount of code possible (and often 
 * Allows you to confirm the requirements: Writing a set of tests for each requirement allows you to confirm with the product owner that you agree about what you're expected to deliver. 
 
 * Free documentation: Your tests can act as documentation. A new developer coming onto the project will be able to clearly see how the code was developed and what each bit does.
+
+```
+Writing tests shows off to the user or customer that you are a developer that can deliver. Refactoring the code afterwards shows off to other developers that you are good at what you do.
+```
+
+The above is an interesting statement. It's true that writing the tests and then making them pass, is good enough for the customers. They don't care how it was written, they just want the results. But as a developer you should take pride in your work, and that's where the refactoring comes in. Refactoring makes code better which makes you look better. This is achievable with TDD. 
+
+```
+Without TDD, you create code that may look good, but if there are lots of bugs, the customer will notice and then you'll look bad to them and naturally you'll look bad to other developers. 
+```
+
+The above statement is also true, but take it with a pinch of salt. You can be an excellent developer without TDD, but imagine how much better you could be with TDD! 
 
 ## Fizzbuzz example
 
